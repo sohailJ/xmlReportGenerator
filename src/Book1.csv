@@ -1,0 +1,96 @@
+﻿id,Name,code,user_type_id/id,reconcile
+,ASSETS,1,,
+,CURRENT ASSETS,11,,
+,Cash,111,,
+ee_coa_111111,Cash registry,111111,data_account_type_liquidity,id
+ee_coa_111211,Bank account,111211,data_account_type_liquidity,id
+,,,,
+,Financial investments,112,,
+ee_coa_112111,Financial investments (current assets),112111,data_account_type_current_assets,id
+,,,,
+,Receivables and prepayments,113,,
+,1. Trade receivables (current asset),1131,,
+ee_coa_113111,Account receivable,113111,data_account_type_receivable,id
+ee_coa_113121,Account receivable (pos),113121,data_account_type_receivable,id
+,,,,
+,2. Receivables from connected parties (current asset),1132,,
+ee_coa_113211,Short-term receivables from associated undertakings,113211,data_account_type_receivable,id
+ee_coa_113221,Short-term receivables from the owners,113221,data_account_type_receivable,id
+,,,,
+,3. Prepaid and deferred taxes (current asset),1133,data_account_type_fixed_assets,id
+ee_coa_113311,Prepaid taxes account (current asset),113311,,
+ee_coa_113321,deferred taxes (current asset),113321,,
+,,,,
+,4. Other short-term receivables ,1134,,
+ee_coa_113411,Interest receivables,113411,data_account_type_receivable,id
+ee_coa_113421,Other accrued income,113421,data_account_type_receivable,id
+ee_coa_113431,Reimbursements by the state,113431,data_account_type_receivable,id
+ee_coa_113441,Doubtful receivables,113441,data_account_type_receivable,id
+ee_coa_113451,Other short-term receivables,113451,data_account_type_receivable,id
+,,,,
+,5. Prepayments,1135,data_account_type_fixed_assets,id
+ee_coa_113511,Prepayments (current assets),113511,data_account_type_fixed_assets,id
+,,,,
+,,,,
+,Inventories,114,,
+,1. Raw materials,1141,,
+ee_coa_114111,Inventory – raw materials,114111,data_account_type_current_assets,id
+,2. Work in progress,1142,,
+ee_coa_114211,Inventory – work in progress,114211,data_account_type_current_assets,id
+,3. Finished goods,1143,,
+ee_coa_114311,Inventory – finished goods,114311,data_account_type_current_assets,id
+,4. Goods for resale,1144,,
+ee_coa_114411,Inventory – goods purchased for resale ,114411,data_account_type_current_assets,id
+,5. Prepayments for inventories,1145,,
+ee_coa_114511,Inventory – prepayments for inventories,114511,data_account_type_current_assets,id
+,,,,
+,Biological assets,115,data_account_type_current_assets,id
+ee_coa_115111,Biological current assets,115111,data_account_type_current_assets,id
+,,,,
+,,,,
+,,,,
+,FIXED ASSETS,12,,
+,Investments in subsidiaries and affiliated undertakings,121,,
+ee_coa_121111,Shares of subsidiaries ,121111,data_account_type_fixed_assets,id
+ee_coa_121211,Shares of affiliated undertakings,121211,data_account_type_fixed_assets,id
+,,,,
+,Financial investments,122,,
+ee_coa_122111,Financial investments (fixed asset),122111,data_account_type_fixed_assets,id
+,,,,
+,Receivables and prepayments,123,,
+,1. Trade receivables,1231,,
+ee_coa_123111,Trade receivables (fixed asset),123111,data_account_type_fixed_assets,id
+,,,,
+,,,,
+,2. Receivables from connected parties,1232,,
+ee_coa_123211,Long-term receivables from associated undertakings,123211,data_account_type_receivable,id
+ee_coa_123221,Long-term receivables from the owners,123221,data_account_type_receivable,
+,,,,
+,3. Prepaid and deferred taxes,1233,,
+ee_coa_123311,Prepaid and deferred taxes (fixed asset),123311,data_account_type_fixed_assets,id
+,,,,
+,4. Other receivables,1234,,
+ee_coa_123411,Other long-term receivables,123411,data_account_type_fixed_assets,id
+,,,,
+,5. Prepayments,1235,,
+ee_coa_123511,Prepayments (fixed assets),123511,data_account_type_fixed_assets,id
+,,,,
+,Investment properties,124,,
+ee_coa_124111,Investment properties ,124111,data_account_type_fixed_assets,id
+,,,,
+,Tangible assets,125,,
+ee_coa_125111,Land ,125111,data_account_type_fixed_assets,id
+ee_coa_125211,Buildings,125211,data_account_type_fixed_assets,id
+ee_coa_125311,Computers and computer systems,125311,data_account_type_fixed_assets,id
+ee_coa_125411,Means of transportation ,125411,data_account_type_fixed_assets,id
+ee_coa_125511,Machinery and equipment,125511,data_account_type_fixed_assets,id
+ee_coa_125611,Other tangible fixed assets,125611,data_account_type_fixed_assets,id
+,,,,
+,Biological assets,126,,
+ee_coa_126111,Biological fixed assets,126111,data_account_type_fixed_assets,id
+,,,,
+,Intangible assets,127,,
+ee_coa_127111,Construction in progress (TANGIBLE NON?),127111,data_account_type_non_current_assets,id
+ee_coa_127211,"Patents, licences, and trade marks",127211,data_account_type_non_current_assets,id
+ee_coa_127311,Goodwill,127311,data_account_type_non_current_assets,id
+ee_coa_127411,Other intangible fixed assets,127411,data_account_type_non_current_assets,id
