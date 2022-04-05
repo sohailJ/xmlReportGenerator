@@ -6,8 +6,17 @@ def get_level_and_sequence():
     return
 
 
-def generate_bs_report_line(root, name, hierarchy_code):
-    level = len(hierarchy_code)-1
+def compute_hierarchy_code(level_sequence):
+    level = 1
+    hierarchy_code = ''
+    while level_sequence.get(level):
+        hierarchy_code += str(level_sequence[level])
+        level += 1
+    return hierarchy_code
+
+
+def generate_bs_report_line(root, name, level, hierarchy_code):
+    level = len(hierarchy_code) - 1
     sequence = hierarchy_code[-1]
     record = ET.SubElement(root, 'record', id=f'account_financial_report_line_ee_{hierarchy_code}',
                            model='account.financial.html.report.line')
@@ -42,13 +51,49 @@ def generate_bs_first_line():
 
 
 if __name__ == '__main__':
-    root = generate_bs_first_line()
+
     path = './src/source.csv'
-    with open('./src/source.csv') as csv_file:
-        csv_reader = csv.reader(csv_file)
-        is_header = True
+    accounts = [['id', 'name', 'code', 'user_type_id/id', 'reconcile']]
+    account_code_length = 6
+    id_prefix = 'ee_coa_'
+    hierarchy_account = {}
+
+    # report and account csv generation
+    level_sequence = {}
+    root = generate_bs_first_line()
+    with open('./src/source.csv') as csv_input_file:
+        csv_reader = csv.reader(csv_input_file)
         for row in csv_reader:
-            if row[0] == '' and row[1] != '':
-                root = generate_bs_report_line(root, row[1], row[2])
+            if row[0] != '' and row[1] != '':
+                level = int(row[1])
+                name = row[0]
+                if level > 0:
+                    if level_sequence.get(level):
+                        level_sequence[level] += 1
+                        superior_level = level + 1
+                        while level_sequence.get(superior_level):
+                            del level_sequence[superior_level]
+                            superior_level += 1
+                    else:
+                        level_sequence[level] = 1
+                    root = generate_bs_report_line(root, name, level - 1, compute_hierarchy_code(level_sequence))
+                else:
+                    hierarchy_code = compute_hierarchy_code(level_sequence)
+                    if hierarchy_account.get(hierarchy_code):
+                        account_code_last = hierarchy_account[hierarchy_code][-1]
+                        account_code = account_code_last[len(hierarchy_code):]
+                        account_code = hierarchy_code + str(int(account_code[::-1]) + 1)[::-1]
+                        hierarchy_account[hierarchy_code].append(account_code)
+                    else:
+                        account_code = hierarchy_code + '1' * (account_code_length - len(hierarchy_code))
+                        hierarchy_account[hierarchy_code] = [account_code]
+
+                    accounts_row = [id_prefix + account_code, name, account_code, '', 'False']
+                    accounts.append(accounts_row)
+    with open('account.account.template.csv', 'w') as csv_output_file:
+        csv_writer = csv.writer(csv_output_file, quotechar='"')
+        for account in accounts:
+            csv_writer.writerow(account)
+
     tree = ET.ElementTree(root)
     tree.write('bs_report.xml')
