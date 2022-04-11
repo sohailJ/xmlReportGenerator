@@ -1,4 +1,4 @@
-﻿ASSETS,1
+ASSETS,1
 CURRENT ASSETS,2
 Cash,3
 Cash registry,0
@@ -6,13 +6,13 @@ Bank account,0
 Financial investments,3
 Financial investments (current assets),0
 Receivables and prepayments,3
-1. Trade receivables (current asset),4
+1. Trade receivables ,4
 Account receivable,0
 Account receivable (PoS),0
-2. Receivables from connected parties (current asset),4
+2. Receivables from connected parties ,4
 Short-term receivables from associated undertakings,0
 Short-term receivables from the owners,0
-3. Prepaid and deferred taxes (current asset),4
+3. Prepaid and deferred taxes,4
 Prepaid taxes account (current asset),0
 deferred taxes (current asset),0
 4. Other short-term receivables ,4
@@ -25,15 +25,15 @@ Other short-term receivables,0
 Prepayments (current assets),0
 Inventories,3
 1. Raw materials,4
-Inventory – raw materials,0
+Inventory : raw materials,0
 2. Work in progress,4
-Inventory – work in progress,0
+Inventory : work in progress,0
 3. Finished goods,4
-Inventory – finished goods,0
+Inventory : finished goods,0
 4. Goods for resale,4
-Inventory – goods purchased for resale ,0
+Inventory : goods purchased for resale ,0
 5. Prepayments for inventories,4
-Inventory – prepayments for inventories,0
+Inventory : prepayments for inventories,0
 Biological assets,3
 Biological current assets,0
 FIXED ASSETS,2
@@ -91,7 +91,7 @@ Other short-term employee-related liabilities,0
 VAT payable,0
 Land tax,0
 Withholding tax on fringe benefits,0
-Tax – income tax on the costs of entertaining guests,0
+Income tax on the costs of entertaining guests,0
 4. Other payable,5
 Other payable Account,0
 Debt of the traveling expenses,0
@@ -117,7 +117,7 @@ Long-term notes,0
 Long-term financial lease ,0
 Payable and prepayments,3
 1. Trade creditors,4
-Long-term payable accout,0
+Long-term payable account,0
 2. Employee-related liabilities,4
 Long-term employee-related liabilities,0
 3. Taxes payable,4
@@ -131,3 +131,34 @@ Other long-term payables,0
 Prepaid revenues account (non-current liability),0
 6. Other received prepayments,5
 Other received prepayments (non-current liability),0
+Provisions ,3
+1.?Provisions for warranty,4
+Provisions for warranty (non-current liability),0
+2.?Provisions for taxation,4
+Provisions for taxation,0
+3.?Other provisions,4
+Other provisions (non-current liability),0
+Targeted financing ,3
+Long-term target financing,0
+Owners' equity,2
+Owners' equity,0
+Minority holding,2
+Minority holding,0
+Share capital in nominal value,2
+Share capital in nominal value,0
+Unregistered share capital,2
+Unregistered share capital,0
+Unpaid share capital,2
+Unpaid share capital,0
+Share premium account,2
+Share premium account,0
+Own shares,2
+Own shares,0
+Legal reserve,2
+Legal reserve,0
+Other reserves,2
+Other reserves,0
+Other owners' equity,2
+Other owners' equity,0
+Retained profit (loss),2
+Retained profit (loss),0

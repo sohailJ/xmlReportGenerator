@@ -64,6 +64,7 @@ if __name__ == '__main__':
     with open('./src/source.csv') as csv_input_file:
         csv_reader = csv.reader(csv_input_file)
         for row in csv_reader:
+            print(row)
             if row[0] != '' and row[1] != '':
                 level = int(row[1])
                 name = row[0]
