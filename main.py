@@ -52,7 +52,7 @@ def generate_bs_first_line():
 
 if __name__ == '__main__':
 
-    path = './src/source.csv'
+    path = 'src/bs_source.csv'
     accounts = [['id', 'name', 'code', 'user_type_id/id', 'reconcile']]
     account_code_length = 6
     id_prefix = 'ee_coa_'
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     # report and account csv generation
     level_sequence = {}
     root = generate_bs_first_line()
-    with open('./src/source.csv') as csv_input_file:
+    with open(path) as csv_input_file:
         csv_reader = csv.reader(csv_input_file)
         for row in csv_reader:
             if row[0] != '' and row[1] != '':
